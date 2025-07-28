@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Baking Workshop Sign-Up</title>
+</head>
+<body>
+
+  <h1>🍰 Baking Workshop Sign-Up Form</h1>
+  <p>Please fill out this form to register for our exciting baking workshop!</p>
+
+  <form action="/serverlogic" method="post" enctype="multipart/form-data" autocomplete="on">
+
+    <fieldset>
+      <legend><strong>👤 Personal Information</strong></legend>
+
+      <div>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name" autofocus maxlength="50">
+      </div><br>
+
+      <div>
+        <label for="password">Create Password:</label><br>
+        <input type="password" id="password" name="password" required minlength="6" maxlength="20" placeholder="6-20 characters">
+      </div><br>
+
+      <div>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required placeholder="example@mail.com">
+      </div><br>
+
+      <div>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required placeholder="987-654-3210" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      </div><br>
+
+      <div>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required>
+      </div><br>
+
+      <div>
+        <label for="website">Your Blog/Website:</label><br>
+        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+      </div><br>
+
+      <div>
+        <label for="resume">Upload Your Resume:</label><br>
+        <input type="file" id="resume" name="resume" required>
+      </div><br>
+    </fieldset>
+
+    <fieldset>
+      <legend><strong>🍞 Workshop Preferences</strong></legend>
+
+      <div>
+        <label for="session">Preferred Session:</label><br>
+        <select id="session" name="session" required>
+          <option value="">--Select Session--</option>
+          <option value="morning">Morning (9 AM - 12 PM)</option>
+          <option value="afternoon">Afternoon (1 PM - 4 PM)</option>
+          <option value="evening">Evening (5 PM - 8 PM)</option>
+          <option value="weekend">Weekend Special</option>
+          <option value="intensive">Intensive Bootcamp</option>
+        </select>
+      </div><br>
+
+      <div>
+        <label for="skill">Skill Level:</label><br>
+        <input list="skills" name="skill" id="skill" required placeholder="Choose or type">
+        <datalist id="skills">
+          <option value="Beginner">
+          <option value="Intermediate">
+          <option value="Advanced">
+        </datalist>
+      </div><br>
+
+      <div>
+        <label>Preferred Baking Focus (Select at least one):</label><br>
+        <input type="checkbox" id="cakes" name="focus1" value="Cakes" required>
+        <label for="cakes">Cakes</label><br>
+
+        <input type="checkbox" id="cookies" name="focus2" value="Cookies">
+        <label for="cookies">Cookies</label><br>
+
+        <input type="checkbox" id="bread" name="focus3" value="Bread">
+        <label for="bread">Bread</label><br>
+
+        <input type="checkbox" id="pastry" name="focus4" value="Pastry">
+        <label for="pastry">Pastry</label>
+      </div><br>
+
+      <div>
+        <label for="participants">Number of Participants:</label><br>
+        <input type="number" id="participants" name="participants" required min="1" max="5">
+      </div><br>
+
+      <div>
+        <label for="search">Search Workshop Type:</label><br>
+        <input type="search" id="search" name="search" placeholder="Enter workshop type">
+      </div><br>
+
+      <div>
+        <label for="progress">Registration Progress:</label><br>
+        <progress id="progress" value="70" max="100">70%</progress>
+      </div><br>
+    </fieldset>
+
+    <fieldset>
+      <legend><strong>📢 Additional Information</strong></legend>
+
+      <div>
+        <p>Would you like to receive updates?</p>
+        <input type="radio" id="yes" name="updates" value="Yes" required>
+        <label for="yes">Yes</label><br>
+
+        <input type="radio" id="no" name="updates" value="No">
+        <label for="no">No</label>
+      </div><br>
+
+      <div>
+        <label for="comments">Comments or Questions:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Any allergies or suggestions?" required></textarea>
+      </div><br>
+    </fieldset>
+
+    <input type="submit" value="Register Now">
+    <input type="reset" value="Clear Form">
+
+  </form>
+
+</body>
+</html>
